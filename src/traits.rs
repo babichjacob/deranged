@@ -1,6 +1,6 @@
 use crate::{
-    RangedI128, RangedI16, RangedI32, RangedI64, RangedI8, RangedIsize, RangedU128, RangedU16,
-    RangedU32, RangedU64, RangedU8, RangedUsize,
+    RangedI8, RangedI16, RangedI32, RangedI64, RangedI128, RangedIsize, RangedU8, RangedU16,
+    RangedU32, RangedU64, RangedU128, RangedUsize,
 };
 
 macro_rules! declare_traits {

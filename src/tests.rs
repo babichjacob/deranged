@@ -1,11 +1,11 @@
 use std::hash::Hash;
 
 use crate::{
-    IntErrorKind, OptionRangedI128, OptionRangedI16, OptionRangedI32, OptionRangedI64,
-    OptionRangedI8, OptionRangedIsize, OptionRangedU128, OptionRangedU16, OptionRangedU32,
-    OptionRangedU64, OptionRangedU8, OptionRangedUsize, ParseIntError, RangedI128, RangedI16,
-    RangedI32, RangedI64, RangedI8, RangedIsize, RangedU128, RangedU16, RangedU32, RangedU64,
-    RangedU8, RangedUsize, TryFromIntError,
+    IntErrorKind, OptionRangedI8, OptionRangedI16, OptionRangedI32, OptionRangedI64,
+    OptionRangedI128, OptionRangedIsize, OptionRangedU8, OptionRangedU16, OptionRangedU32,
+    OptionRangedU64, OptionRangedU128, OptionRangedUsize, ParseIntError, RangedI8, RangedI16,
+    RangedI32, RangedI64, RangedI128, RangedIsize, RangedU8, RangedU16, RangedU32, RangedU64,
+    RangedU128, RangedUsize, TryFromIntError,
 };
 
 macro_rules! if_signed {
@@ -63,12 +63,9 @@ fn errors() {
         "number would be zero for non-zero type"
     );
     assert_eq!(
-        format!(
-            "{:?}",
-            ParseIntError {
-                kind: IntErrorKind::Empty
-            }
-        ),
+        format!("{:?}", ParseIntError {
+            kind: IntErrorKind::Empty
+        }),
         "ParseIntError { kind: Empty }"
     );
     assert_eq!(
